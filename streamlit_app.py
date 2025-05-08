@@ -6,7 +6,7 @@ import pandas as pd
 st.title("📈 Kalyan Jewellers - Cup & Handle Pattern (1H)")
 
 st.write("Fetching latest 1H data for KALYANKJIL.NS...")
-data = yf.download("KALYANKJIL.NS", interval="1h", start="2024-05-03", end="2024-05-08")
+data = yf.download("KALYANKJIL.NS", interval="1h", start="2024-05-03", end=pd.Timestamp.today())
 
 if data.empty:
     st.error("Failed to fetch stock data. Please check symbol or network.")
